@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # ffi for spec tests
 gem 'ffi', github: 'ffi/ffi', submodules: true
+
+# devise gem
+gem 'devise'
