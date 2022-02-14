@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
+RSpec.describe Group, type: :model do
   subject do
     @user = User.new(name: 'Ali Abbani')
-    @user.categories.new(user_id: @user.id, name: 'Food', icon: 'food-icon') 
+    @group = @user.groups.new(user_id: @user.id, name: 'Food', icon: 'food-icon') 
   end
   before { subject.save }
 
@@ -13,7 +13,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'name should be present' do
-    subject.name = 'Food'
+    subject.name = @group.name
     expect(subject).to be_valid
   end
 
@@ -23,7 +23,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'icon should be present' do
-    subject.icon = 'food-icon'
+    subject.icon = @group.icon
     expect(subject).to be_valid
   end
 
