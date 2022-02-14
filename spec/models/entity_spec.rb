@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Entity, type: :model do
   subject do
     @user = User.new(name: 'Ali Abbani')
-    @entity = @user.entities.new(user_id: @user.id, name: 'Burger', amount: 10) 
+    @entity = @user.entities.new(user_id: @user.id, name: 'Burger', amount: 10)
   end
   before { subject.save }
 
@@ -31,4 +31,3 @@ RSpec.describe Entity, type: :model do
     expect(subject).to be_valid
   end
 end
-
