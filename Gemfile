@@ -79,3 +79,6 @@ gem 'ffi', github: 'ffi/ffi', submodules: true
 
 # devise gem
 gem 'devise'
+
+# add cancancan for authorization
+gem 'cancancan'
