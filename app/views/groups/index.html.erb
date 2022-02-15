@@ -1,2 +1,25 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<%= render partial: "shared/navbar" %>  
+<h1>Categories</h1>
+<% @groups.each do |group| %>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="..." class="img-fluid rounded-start" alt="...">
+        <%= group.icon %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <%= link_to group_path(group.id) do %>
+            <h5 class="card-title"><%= group.name %></h5>
+          <% end %>
+          <p class="card-text"><small class="text-muted"><%= group.created_at %></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%= link_to "Add New Category", new_group_path, :class => "btn btn-primary" %>
+
+
+
+
