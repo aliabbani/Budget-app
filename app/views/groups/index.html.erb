@@ -1,4 +1,3 @@
-<%= render partial: "shared/navbar" %>  
 <h1>Categories</h1>
 <% @groups.each do |group| %>
   <div class="card mb-3" style="max-width: 540px;">
@@ -9,7 +8,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <%= link_to group_path(group.id) do %>
+          <%= link_to group_entities_path(group.id) do %>
             <h5 class="card-title"><%= group.name %></h5>
           <% end %>
           <p class="card-text"><small class="text-muted"><%= group.created_at %></small></p>

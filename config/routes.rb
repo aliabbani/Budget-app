@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   resources :splashes, only: [:index]
   resources :users
-  resources :groups, except: [:edit, :update]
+  resources :groups, except: [:edit, :update] do
+    resources :entities, except: [:edit, :update]
+  end
 
   # Defines the root path route ("/")
   # root "articles#index"
