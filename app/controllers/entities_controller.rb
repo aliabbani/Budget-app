@@ -1,6 +1,7 @@
 class EntitiesController < ApplicationController
   def index
-    @entities = Entity.all
+    @group = Group.find(params[:group_id])
+    @entities = @group.entities.all.order(created_at: :desc)
   end
 
   def show; end

@@ -3,4 +3,8 @@ class Entity < ApplicationRecord
   has_many :groups
 
   validates :name, :amount, presence: true
+
+  def total_transaction
+    groups.entities.sum('amount')
+  end
 end

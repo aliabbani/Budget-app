@@ -1,2 +1,26 @@
-<h1>Transactions</h1>
-<p>Find me in app/views/entities/index.html.erb</p>
+<div class="d-flex p-2">
+  <%= link_to "<", groups_path, :class => "primary px-4" %>
+  <h1>Transactions</h1>
+</div>
+
+<div class="p-2">
+  <h3>Total amount of <%= @group.name %> transaction's: <%= @total_transaction %></h3>
+</div>
+
+
+<% @entities.each do |entity| %>
+  <div class="p-2">
+    <div class="card p-2">
+      <div class="card-body">
+        <h5 class="card-title"><%= entity.name %></h5>
+        <p class="card-text"><%= entity.amount %></p>
+        <p class="card-text"><small class="text-muted"><%= entity.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="p-2">
+  <%= link_to "Add New Transaction", new_group_entity_path(@group, @entity), :class => "btn btn-primary" %>
+</div>
+
