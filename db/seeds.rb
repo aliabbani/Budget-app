@@ -12,5 +12,5 @@
 @group1 = Group.create!(user: @user1, name: 'Food', icon: 'food-icon')
 @group2 = Group.create!(user: @user1, name: 'Sports', icon: 'sport-icon')
 
-@entity1 = @group1.entities.create!(user: @user1, name: 'entity2', amount: 10)
+@entity1 = @group1.entities.create!(user: @user1, name: 'entity1', amount: 5)
 @entity2 = @group1.entities.create!(user: @user1, name: 'entity2', amount: 10)

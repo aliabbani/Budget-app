@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
   def index
-    @group = Group.find(params[:group_id])
+    @group = Group.includes(:entities).find(params[:group_id])
     @entities = @group.entities.all.order(created_at: :desc)
   end
 
@@ -19,11 +19,9 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       format.html do
         if @entity.save
-          flash[:success] = 'You have successfully created a transaction.'
-          redirect_to group_entities_path(@group.id)
+          redirect_to group_entities_path(@group.id), notice: 'You have successfully created a transaction.'
         else
-          flash.now[:error] = 'Error: Transaction could not be saved'
-          render :new
+          render :new, alert: 'Error: Transaction could not be saved'
         end
       end
     end

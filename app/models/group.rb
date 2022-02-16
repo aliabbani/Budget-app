@@ -4,7 +4,7 @@ class Group < ApplicationRecord
 
   validates :name, :icon, presence: true
 
-  def total_amount
+  def total_transaction
     entities.sum(:amount)
   end
 end

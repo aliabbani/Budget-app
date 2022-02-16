@@ -1,10 +1,10 @@
 <div class="d-flex p-2">
   <%= link_to "<", groups_path, :class => "primary px-4" %>
-  <h1>Transactions</h1>
+  <h1><%= @group.name %>'s transactions</h1>
 </div>
 
 <div class="p-2">
-  <h3>Total amount of <%= @group.name %> transaction's: <%= @total_transaction %></h3>
+  <h3>Total spent: <%= @group.total_transaction %></h3>
 </div>
 
 

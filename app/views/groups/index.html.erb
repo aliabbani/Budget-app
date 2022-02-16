@@ -11,6 +11,7 @@
           <%= link_to group_entities_path(group.id) do %>
             <h5 class="card-title"><%= group.name %></h5>
           <% end %>
+          <small>Total amount spent: <%= group.total_transaction %></small>
           <p class="card-text"><small class="text-muted"><%= group.created_at %></small></p>
         </div>
       </div>

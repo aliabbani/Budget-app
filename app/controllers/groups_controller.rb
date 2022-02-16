@@ -18,11 +18,9 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.html do
         if @group.save
-          flash[:success] = 'You have successfully created a category.'
-          redirect_to groups_url
+          redirect_to groups_url, notice: 'You have successfully created a category.'
         else
-          flash.now[:error] = 'Error: Category could not be saved'
-          render :new
+          render :new, alert: 'Error: Category could not be saved'
         end
       end
     end
