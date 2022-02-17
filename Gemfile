@@ -83,3 +83,6 @@ gem 'devise'
 
 # add cancancan for authorization
 gem 'cancancan'
+
+# fix n+1 problems
+gem 'bullet', group: 'development'

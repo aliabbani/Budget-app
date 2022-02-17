@@ -81,6 +81,9 @@ GEM
     bootsnap (1.10.3)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     cancancan (3.3.0)
     capybara (3.36.0)
       addressable
@@ -256,6 +259,7 @@ GEM
     tzinfo-data (1.2021.5)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.1.0)
+    uniform_notifier (1.14.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -279,6 +283,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet
   cancancan
   capybara
   database_cleaner
