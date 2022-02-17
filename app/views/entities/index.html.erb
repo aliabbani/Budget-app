@@ -1,6 +1,6 @@
 <div class="d-flex p-2">
   <%= link_to "<", groups_path, :class => "primary px-4" %>
-  <h1><%= @group.name %>'s transactions</h1>
+  <h1><%= @group.name.capitalize %>'s transactions</h1>
 </div>
 
 <div class="p-2">
@@ -21,6 +21,6 @@
 <% end %>
 
 <div class="p-2">
-  <%= link_to "Add New Transaction", new_group_entity_path(@group, @entity), :class => "btn btn-primary" %>
+  <%= link_to "Add transaction", new_group_entity_path(@group, @entity), :class => "btn btn-primary" %>
 </div>
 

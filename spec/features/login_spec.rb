@@ -15,5 +15,4 @@ RSpec.describe 'Login features', js: true do
     click_button('Log in')
     expect(current_path).to have_content('/')
   end
-  
 end
