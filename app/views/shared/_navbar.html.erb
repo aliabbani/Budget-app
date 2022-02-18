@@ -6,7 +6,7 @@
   <% elsif current_page?(new_group_path)  %>
       <%= link_to "<", groups_path, class: "back primary" %>
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
-  <% elsif current_page?(group_entities_path)  %>
+  <% elsif current_page?(group_entities_path(@group.id))  %>
       <%= link_to "<", groups_path, class: "back primary" %>
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
   <% elsif current_page?(new_group_entity_path(@group, @entity))  %>
