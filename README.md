@@ -47,6 +47,8 @@ rails generate rspec:install
 ```javascript
 rspec spec
 ```
+
+## [Live demo](https://stormy-wave-95285.herokuapp.com/)
 ## Author
 
 👤 **Ali Abbani**
