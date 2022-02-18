@@ -86,3 +86,6 @@ gem 'cancancan'
 
 # fix n+1 problems
 gem 'bullet', group: 'development'
+
+# for testing: to render the template inside the request folder
+gem 'rails-controller-testing'

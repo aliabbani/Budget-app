@@ -5,7 +5,7 @@ RSpec.feature 'Group index', type: :feature do
     visit new_user_session_path
 
     @user = User.create(name: 'Ali', email: 'ali@mail.com', password: '123456', confirmed_at: Time.now)
-    @group = Group.create(user_id: @user.id, name: 'Travel', icon: 'travel-icon')
+    @group = Group.create(user_id: @user.id, name: 'Travel', icon: fixture_file_upload('Padget.png'))
 
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
@@ -21,7 +21,6 @@ RSpec.feature 'Group index', type: :feature do
 
   scenario 'display Group details on page' do
     expect(page).to have_content @group.name
-    expect(page).to have_content @group.icon
   end
 
   scenario 'display Add New Category button on page' do

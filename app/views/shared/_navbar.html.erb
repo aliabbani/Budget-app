@@ -2,15 +2,15 @@
 <% if user_signed_in? %>
    <% if current_page?(groups_path) %>
     <%= link_to "Padget", groups_path, class: "logo-nav primary" %>
-    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
-   <% elsif current_page?(new_group_path)  %>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %> 
+  <% elsif current_page?(new_group_path)  %>
       <%= link_to "<", groups_path, class: "back primary" %>
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
   <% elsif current_page?(group_entities_path)  %>
       <%= link_to "<", groups_path, class: "back primary" %>
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
   <% elsif current_page?(new_group_entity_path(@group, @entity))  %>
-      <%= link_to "<", groups_path, class: "back primary" %>
+      <%= link_to "<", group_entities_path, class: "back primary" %>
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "justify-content-center align-self-center btn btn-secondary btn-sm" %>
   <% end %>
 <% end %>

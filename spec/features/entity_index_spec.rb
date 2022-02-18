@@ -5,7 +5,7 @@ RSpec.feature 'Entity index', type: :feature do
     visit new_user_session_path
 
     @user = User.create(name: 'Ali', email: 'ali@mail.com', password: '123456', confirmed_at: Time.now)
-    @group = Group.create(user_id: @user.id, name: 'Travel', icon: 'travel-icon')
+    @group = Group.create(user_id: @user.id, name: 'Travel', icon: fixture_file_upload('Padget.png'))
     @entity = @group.entities.create(name: 'india', amount: 1500, user_id: @user.id)
 
     fill_in 'Email', with: @user.email
