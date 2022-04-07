@@ -48,7 +48,6 @@ rails generate rspec:install
 rspec spec
 ```
 
-## [Live demo](https://stormy-wave-95285.herokuapp.com/)
 ## Author
 
 👤 **Ali Abbani**
