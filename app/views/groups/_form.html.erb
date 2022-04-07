@@ -1,0 +1,15 @@
+<%= form_with model: @group, method: :post, local: true do |form| %>
+    <div class="mb-3 p-2">
+      <%= form.label :name, "Name", :class => "form-label" %>
+      <%= form.text_field :name, placeholder: "Category Name", required: true, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3 p-2">
+      <%= form.label :icon, "Icon", :class => "form-label" %>
+      <%= form.file_field :icon, placeholder: "Icon link", required: true, :class => "form-control" %>
+    </div>
+
+    <div class="p-2">
+      <%= form.submit "Save", class: "btn btn-primary", disable_with: "Please wait..." %>
+    </div>
+<% end %>

@@ -1,0 +1,26 @@
+<h1 class="brand-text text-primary px-2">Categories</h1>
+<div class="px-2">
+<% @groups.each do |group| %>
+  <div class="card mb-3 bg-light" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-4 py-3">
+        <% if group.icon.attached? %>
+          <img src="<%=(url_for(group.icon))%>" class="img-fluid rounded mx-auto d-block image" alt="..." height = "60">
+        <% end %>
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <%= link_to group_entities_path(group.id) do %>
+            <h5 class="card-title"><%= group.name %></h5>
+          <% end %>
+          <small>Total amount spent: <%= group.total_transaction %></small>
+          <p class="card-text"><small class="text-muted"><%= group.created_at %></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+<div class="px-2">
+  <%= link_to "Add category", new_group_path, :class => "btn btn-primary" %>
+</div>

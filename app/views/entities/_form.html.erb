@@ -1,0 +1,17 @@
+<%= form_with model: @entity, url: group_entities_path, method: :post, local: true do |form| %>
+
+    <div class="mb-3 p-2">
+      <%= form.label :name, "Name", :class => "form-label" %>
+      <%= form.text_field :name, placeholder: "Transaction Name", required: true, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3 p-2">
+      <%= form.label :amount, "Amount", :class => "form-label" %>
+      <%= form.number_field :amount, placeholder: "Amount", required: true, :class => "form-control" %>
+    </div>
+
+    <div class="p-2">
+      <%= form.submit "Save", class: "btn btn-primary", disable_with: "Please wait..." %>
+    </div>
+
+<% end %>
